@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Designed for virtual Magic: The Gathering Games">
+    	<meta name="keywords" content="one, two, three">
+		  <title>Magic the Gathering Card Game</title>
+		  <!-- external CSS link -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+		  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+		  <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+    <section class="top_header_section">
+		  <h1 class="top_header_text">Magic: The Gathering Card Game</h1>
+    </section>
+    <section class="description_section">
+      <p class="description">Search a Magic: The Gathering card below</p>
+    </section>
+	<section class="all_player_sections">
+		<section class="life_section">
+			<button class="gain_life_button" onclick="increment()">@</button>
+			<h4 id="counting"></h4>
+			<button class="lose_life_button" onclick="decrement()">=</button>
+		</section>
+    <section class="search_section">
+		  <input id="creature_input" type="text" name="" value="" placeholder="Search your non-land cards here">
+		  <button id="creature_button" type="button" name="button">Search</button>
+    </section>
+		<section class="directions">
+      <p>Click to tap/untap. Double-click to remove</p>
+    </section>
+		<section class="all_player_sections">
+    	<section id="information_sections_id" class="information_sections">
+				<h2 class="deck_titles">Creatures</h2>
+      	<section id="card_image_section">
+    	</section>
+			<section id="land_sections_id" class="information_sections">
+				<section class="search_section">
+			  	<input id="land_input" type="text" name="" value="" placeholder="Search your land cards here">
+			  	<button id="land_button" type="button" name="button">Search</button>
+	    	</section>
+				<h2 class="land_section">Lands</h2>
+				<section id="land_image_section">
+				</section>
+		</section>
+		<!-- oppponent one section begins below -->
+		<section class="opponent_section">
+			<h2 id="opponent_one_name_title" class="card_section_title">Opponent 1</h2>
+			<section class="life_section">
+				<button class="gain_life_button" onclick="incrementOpponent1()">@</button>
+				<h4 id="counting_opponent1"></h4>
+				<button class="lose_life_button" onclick="decrementOpponent1()">=</button>
+			</section>
+			<section class="search_section">
+			  <input id="creature_input_opponent1" type="text" name="" value="" placeholder="Search non-land cards here">
+			  <button id="creature_button_opponent1" type="button" name="button">Search</button>
+	    </section>
+			<section>
+	    	<section id="information_sections_id" class="information_sections">
+					<h2 class="deck_titles">Creatures</h2>
+	      	<section id="card_image_section_opponent1">
+	    	</section>
+				<section id="land_sections_id" class="information_sections">
+					<section class="search_section">
+				  	<input id="land_input_opponent1" type="text" name="" value="" placeholder="Search land cards here">
+				  	<button id="land_button_opponent1" type="button" name="button">Search</button>
+		    	</section>
+					<h2 class="land_section">Lands</h2>
+					<section id="land_image_section_opponent1">
+					</section>
+			</section>
+		</section>
+		<!--  opponent two section begins below -->
+		<section class="opponent_section">
+			<h2 id="opponent_two_name_title" class="card_section_title">Opponent 2</h2>
+			<section class="life_section">
+				<button class="gain_life_button" onclick="incrementOpponent2()">@</button>
+				<h4 id="counting_opponent2"></h4>
+				<button class="lose_life_button" onclick="decrementOpponent2()">=</button>
+			</section>
+			<section class="search_section">
+			  <input id="creature_input_opponent2" type="text" name="" value="" placeholder="Search non-land cards here">
+			  <button id="creature_button_opponent2" type="button" name="button">Search</button>
+	    </section>
+			<section class="all_player_sections">
+	    	<section id="information_sections_id" class="information_sections">
+					<h2 class="deck_titles">Creatures</h2>
+	      	<section id="card_image_section_opponent2">
+	    	</section>
+				<section id="land_sections_id" class="information_sections">
+					<section class="search_section">
+				  	<input id="land_input_opponent2" type="text" name="" value="" placeholder="Search land cards here">
+				  	<button id="land_button_opponent2" type="button" name="button">Search</button>
+		    	</section>
+					<h2 class="land_section">Lands</h2>
+					<section id="land_image_section_opponent2">
+					</section>
+			</section>
+		</section>
+		<!--  opponent three section begins below -->
+		<section class="opponent_section">
+			<h2 id="opponent_three_name_title" class="card_section_title">Opponent 3</h2>
+			<section class="life_section">
+				<button class="gain_life_button" onclick="incrementOpponent3()">@</button>
+				<h4 id="counting_opponent3"></h4>
+				<button class="lose_life_button" onclick="decrementOpponent3()">=</button>
+			</section>
+			<section class="search_section">
+			  <input id="creature_input_opponent3" type="text" name="" value="" placeholder="Search non-land cards here">
+			  <button id="creature_button_opponent3" type="button" name="button">Search</button>
+	    </section>
+			<section class="all_player_sections">
+	    	<section id="information_sections_id" class="information_sections">
+					<h2 class="deck_titles">Creatures</h2>
+	      	<section id="card_image_section_opponent3">
+	    	</section>
+				<section id="land_sections_id" class="information_sections">
+					<section class="search_section">
+				  	<input id="land_input_opponent3" type="text" name="" value="" placeholder="Search land cards here">
+				  	<button id="land_button_opponent3" type="button" name="button">Search</button>
+		    	</section>
+					<h2 class="land_section">Lands</h2>
+					<section id="land_image_section_opponent3">
+					</section>
+			</section>
+		</section>
+	</section>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/naming.js"></script>
+	</body>
+</html>
