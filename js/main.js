@@ -60,17 +60,17 @@ boxLands.addEventListener('dblclick', function handleClick(event){
 })
 
 const boxLandsOpponentOne = document.getElementById('land_image_section_opponent1');
-boxLands.addEventListener('dblclick', function handleClick(event){
+boxLandsOpponentOne.addEventListener('dblclick', function handleClick(event){
   event.target.remove();
 })
 
 const boxLandsOpponentTwo = document.getElementById('land_image_section_opponent2');
-boxLands.addEventListener('dblclick', function handleClick(event){
+boxLandsOpponentTwo.addEventListener('dblclick', function handleClick(event){
   event.target.remove();
 })
 
 const boxLandsOpponentThree = document.getElementById('land_image_section_opponent3');
-boxLands.addEventListener('dblclick', function handleClick(event){
+boxLandsOpponentThree.addEventListener('dblclick', function handleClick(event){
   event.target.remove();
 })
 
@@ -212,6 +212,7 @@ function landFetchOpponentTwo(){
   fetch(url)
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       console.log(data.cards)
       console.log(data.cards[0].name)
 
