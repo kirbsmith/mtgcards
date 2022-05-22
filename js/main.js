@@ -179,10 +179,10 @@ function landFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data.cards)
-        console.log(data.cards[0].name)
+        console.log(data.cards[1].name)
 
         var img = document.createElement("img")
-        img.src = data.cards[0].imageUrl
+        img.src = data.cards[1].imageUrl
         var src = document.getElementById('land_image_section')
         src.appendChild(img)
     })
