@@ -19,7 +19,7 @@
 }
 
 img{
-  padding: 0;
+  padding: 8px;
   width: 125px;
   transition: 0.2s;
 }

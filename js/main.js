@@ -185,6 +185,8 @@ function landFetch(){
         img.src = data.cards[1].imageUrl
         var src = document.getElementById('land_image_section')
         src.appendChild(img)
+
+        
     })
 }
 
