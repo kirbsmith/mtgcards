@@ -170,6 +170,8 @@ function decrementOpponent3(){
 //   event.target.rotate(15);
 // })
 
+var creatureData = 0;
+
 function landFetch(){
   const choice = document.querySelector('#land_input').value
   const url = `https://api.magicthegathering.io/v1/cards?name=${choice}`
@@ -185,8 +187,6 @@ function landFetch(){
         img.src = data.cards[1].imageUrl
         var src = document.getElementById('land_image_section')
         src.appendChild(img)
-
-        
     })
 }
 
@@ -198,10 +198,10 @@ function landFetchOpponentOne(){
     .then(res => res.json())
     .then(data => {
       console.log(data.cards)
-      console.log(data.cards[0].name)
+      console.log(data.cards[1].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[0].imageUrl
+      img.src = data.cards[1].imageUrl
       var src = document.getElementById('land_image_section_opponent1')
       src.appendChild(img)
     })
@@ -216,10 +216,10 @@ function landFetchOpponentTwo(){
     .then(data => {
       console.log(data)
       console.log(data.cards)
-      console.log(data.cards[0].name)
+      console.log(data.cards[1].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[0].imageUrl
+      img.src = data.cards[1].imageUrl
       var src = document.getElementById('land_image_section_opponent2')
       src.appendChild(img)
     })
@@ -233,10 +233,10 @@ function landFetchOpponentThree(){
     .then(res => res.json())
     .then(data => {
       console.log(data.cards)
-      console.log(data.cards[0].name)
+      console.log(data.cards[1].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[0].imageUrl
+      img.src = data.cards[1].imageUrl
       var src = document.getElementById('land_image_section_opponent3')
       src.appendChild(img)
     })
