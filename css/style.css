@@ -73,7 +73,9 @@ html{
 
 input{
   font-family: "MAGIC", sans-serif;
-  font-size: 34px;
+  font-size: 24px;
+  width: 300px;
+  padding: 6px 4px 4px 6px;
   border: 2px solid black;
   background: white;
 }
@@ -83,9 +85,11 @@ button{
   font-size: 40px;
   transition: 0.2s;
   radius: 5px;
-  padding: 12px;
 }
 
+.search_buttons{
+  padding: 0 12px;
+}
 button:hover{
   background: black;
   color: white;
