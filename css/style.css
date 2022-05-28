@@ -83,6 +83,7 @@ button{
   font-size: 40px;
   transition: 0.2s;
   radius: 5px;
+  padding: 12px;
 }
 
 button:hover{
