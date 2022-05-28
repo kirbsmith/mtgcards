@@ -197,6 +197,7 @@ function landFetchOpponentOne(){
   fetch(url)
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       console.log(data.cards)
       console.log(data.cards[1].name)
 
