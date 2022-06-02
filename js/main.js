@@ -8,6 +8,18 @@ document.querySelector('#land_button_opponent2').addEventListener('click', landF
 document.querySelector('#creature_button_opponent3').addEventListener('click', getFetchOpponentThree)
 document.querySelector('#land_button_opponent3').addEventListener('click', landFetchOpponentThree)
 
+const tutorialHover = document.getElementById('tutorial_heading')
+const tutorialDirections = document.getElementById('tutorial_section')
+const tutorialXOut = document.getElementById('tutorial_x_out')
+
+tutorialHover.addEventListener('click', function handleClick(){
+  tutorialDirections.style.display = 'block';
+})
+
+tutorialXOut.addEventListener('click', function handleMouseOut(){
+  tutorialDirections.style.display = 'none';
+})
+
 const boxLands = document.getElementById('land_image_section');
 boxLands.addEventListener('dblclick', function handleClick(event){
   event.target.remove();

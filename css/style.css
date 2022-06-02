@@ -51,22 +51,57 @@ html{
   text-shadow: rgba(255,255,255,1) 2px 0 20px;
 }
 
-.tutorial{
+#tutorial_heading{
   position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.tutorial_anchor{
+  font-size: 30px;
   color: white;
-  font-size: 28px;
+  top: 45px;
+  left: 30px;
+  padding: 8px 6px 0px 8px;
   font-family: "MAGIC", sans-serif;
-  text-decoration: underline 0.15em rgba(255,255,255,0);
-  transition: text-decoration-color 0.4s;
+  background: rgba(10,10,10,0.3);
+  border-radius: 2px;
+  transition: 0.4s;
 }
 
-.tutorial_anchor:hover{
-  text-decoration-color: white;
+#tutorial_heading:hover{
+  background: rgba(255,255,255,0.8);
+  color: black;
+  border-radius: 8px;
+}
+
+#tutorial_section{
+  position: absolute;
+  left: 30px;
+  top: 90px;
+  display: none;
+}
+
+.tutorial_section_list{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
+  width: 375px;
+  color: white;
+  background: rgba(10,10,10,0.6);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 0 8px 12px;
+}
+
+#tutorial_x_out{
+  text-align: right;
+  padding: 12px 12px 0 0;
+  background: rgba(10,10,10,0.6);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#tutorial_x_out:hover{
+  color: white;
 }
 
 .description_section{
