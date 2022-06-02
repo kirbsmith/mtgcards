@@ -108,6 +108,7 @@ button{
   padding: 0 12px;
   border-radius: 10px;
   margin-left: 3px;
+  background: rgba(220,220,220,0.5);
 }
 button:hover{
   background: black;
@@ -323,5 +324,5 @@ h5:hover{
   border-radius: 8px;
   padding: 10px 6px 6px 6px;
   margin-top: 5px;
-  background: rgba(220,220,220,0.6)
+  background: rgba(220,220,220,0.5)
 }
