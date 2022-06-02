@@ -366,7 +366,8 @@ h5:hover{
   border: 2px solid black;
   padding: 10px 6px 6px 6px;
   margin-top: 5px;
-  background: rgba(220,220,220,0.5)
+  background: rgba(220,220,220,0.5);
+  transition: 0.8s;
 }
 
 .land_search_forest:hover{
