@@ -53,13 +53,14 @@ html{
 
 .tutorial{
   position: absolute;
-  font-size: 20px;
   top: 30px;
   left: 30px;
 }
 
 .tutorial_anchor{
   color: white;
+  font-size: 28px;
+  font-family: "MAGIC", sans-serif;
   text-decoration: underline 0.15em rgba(255,255,255,0);
   transition: text-decoration-color 0.4s;
 }
