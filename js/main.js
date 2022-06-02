@@ -526,36 +526,48 @@ function getFetch(){
       creatureInformationSection.setAttribute('class', 'creature_information_section')
       creatureSection.appendChild(creatureInformationSection)
 
-      var creatureAttackSection = document.createElement("section")
-      creatureAttackSection.setAttribute('class', 'creature_at_section')
-      creatureInformationSection.appendChild(creatureAttackSection)
+      var creatureType = data.cards[0].originalType
+      var creatureOfficial = "Creature"
+      console.log(creatureType)
+      if(creatureType.includes(creatureOfficial)){
 
-      var creatureAttackHeading = document.createElement("h6")
-      var creatureAttackHeadingText = document.createTextNode("Attack: ")
-      creatureAttackHeading.setAttribute('class', 'creature_info_heading')
-      creatureAttackHeading.appendChild(creatureAttackHeadingText)
-      creatureInformationSection.appendChild(creatureAttackHeading)
+        var creatureAttackSection = document.createElement("section")
+        creatureAttackSection.setAttribute('class', 'creature_at_section')
+        creatureInformationSection.appendChild(creatureAttackSection)
 
-      var creatureAttack = document.createElement('input')
-      creatureAttack.setAttribute('class', 'creature_info')
-      creatureAttack.setAttribute('type', 'number')
-      creatureInformationSection.appendChild(creatureAttack)
+        var creatureAttackHeading = document.createElement("h6")
+        var creatureAttackHeadingText = document.createTextNode("Attack: ")
+        creatureAttackHeading.setAttribute('class', 'creature_info_heading')
+        creatureAttackHeading.appendChild(creatureAttackHeadingText)
+        creatureInformationSection.appendChild(creatureAttackHeading)
 
-      var creatureToughnessSection = document.createElement("section")
-      creatureToughnessSection.setAttribute('class', 'creature_at_section')
-      creatureInformationSection.appendChild(creatureToughnessSection)
+        var creatureAttack = document.createElement('input')
+        creatureAttack.setAttribute('class', 'creature_info')
+        creatureAttack.setAttribute('type', 'number')
+        creatureInformationSection.appendChild(creatureAttack)
 
-      var creatureToughnessHeading = document.createElement("h6")
-      var creatureToughnessHeadingText = document.createTextNode("Toughness: ")
-      creatureToughnessHeading.setAttribute('class', 'creature_info_heading')
-      creatureToughnessHeading.appendChild(creatureToughnessHeadingText)
-      creatureInformationSection.appendChild(creatureToughnessHeading)
+        var creatureToughnessSection = document.createElement("section")
+        creatureToughnessSection.setAttribute('class', 'creature_at_section')
+        creatureInformationSection.appendChild(creatureToughnessSection)
 
-      var creatureToughness = document.createElement('input')
-      creatureToughness.setAttribute('class', 'creature_info')
-      creatureToughness.setAttribute('type', 'number')
-      creatureInformationSection.appendChild(creatureToughness)
+        var creatureToughnessHeading = document.createElement("h6")
+        var creatureToughnessHeadingText = document.createTextNode("Toughness: ")
+        creatureToughnessHeading.setAttribute('class', 'creature_info_heading')
+        creatureToughnessHeading.appendChild(creatureToughnessHeadingText)
+        creatureInformationSection.appendChild(creatureToughnessHeading)
 
+        var creatureToughness = document.createElement('input')
+        creatureToughness.setAttribute('class', 'creature_info')
+        creatureToughness.setAttribute('type', 'number')
+        creatureInformationSection.appendChild(creatureToughness)
+
+      // var creatureType = data.cards[0].originalType
+      // var creatureOfficial = "Creature"
+      // console.log(creatureType)
+      // if(creatureType.includes(creatureOfficial)){
+      //   console.log('YES')
+      // }
+    }
       img.addEventListener('dblclick', function handleClick(event){
         creatureSection.remove();
       })
@@ -590,45 +602,51 @@ function getFetchOpponentOne(){
     creatureInformationSectionOpponentOne.setAttribute('class', 'creature_information_section')
     creatureSectionOpponentOne.appendChild(creatureInformationSectionOpponentOne)
 
-    var creatureAttackSectionOpponentOne = document.createElement("section")
-    creatureAttackSectionOpponentOne.setAttribute('class', 'creature_at_section')
-    creatureInformationSectionOpponentOne.appendChild(creatureAttackSectionOpponentOne)
+    var creatureType = data.cards[0].originalType
+    var creatureOfficial = "Creature"
+    console.log(creatureType)
+    if(creatureType.includes(creatureOfficial)){
 
-    var creatureAttackHeadingOpponentOne = document.createElement("h6")
-    var creatureAttackHeadingTextOpponentOne = document.createTextNode("Attack: ")
-    creatureAttackHeadingOpponentOne.setAttribute('class', 'creature_info_heading')
-    creatureAttackHeadingOpponentOne.appendChild(creatureAttackHeadingTextOpponentOne)
-    creatureInformationSectionOpponentOne.appendChild(creatureAttackHeadingOpponentOne)
+      var creatureAttackSectionOpponentOne = document.createElement("section")
+      creatureAttackSectionOpponentOne.setAttribute('class', 'creature_at_section')
+      creatureInformationSectionOpponentOne.appendChild(creatureAttackSectionOpponentOne)
 
-    var creatureAttack = document.createElement('input')
-    creatureAttack.setAttribute('class', 'creature_info')
-    creatureAttack.setAttribute('type', 'number')
-    creatureInformationSectionOpponentOne.appendChild(creatureAttack)
+      var creatureAttackHeadingOpponentOne = document.createElement("h6")
+      var creatureAttackHeadingTextOpponentOne = document.createTextNode("Attack: ")
+      creatureAttackHeadingOpponentOne.setAttribute('class', 'creature_info_heading')
+      creatureAttackHeadingOpponentOne.appendChild(creatureAttackHeadingTextOpponentOne)
+      creatureInformationSectionOpponentOne.appendChild(creatureAttackHeadingOpponentOne)
 
-    var creatureToughnessSectionOpponentOne = document.createElement("section")
-    creatureToughnessSectionOpponentOne.setAttribute('class', 'creature_at_section')
-    creatureInformationSectionOpponentOne.appendChild(creatureToughnessSectionOpponentOne)
+      var creatureAttack = document.createElement('input')
+      creatureAttack.setAttribute('class', 'creature_info')
+      creatureAttack.setAttribute('type', 'number')
+      creatureInformationSectionOpponentOne.appendChild(creatureAttack)
 
-    var creatureToughnessHeadingOpponentOne = document.createElement("h6")
-    var creatureToughnessHeadingTextOpponentOne = document.createTextNode("Toughness: ")
-    creatureToughnessHeadingOpponentOne.setAttribute('class', 'creature_info_heading')
-    creatureToughnessHeadingOpponentOne.appendChild(creatureToughnessHeadingTextOpponentOne)
-    creatureInformationSectionOpponentOne.appendChild(creatureToughnessHeadingOpponentOne)
+      var creatureToughnessSectionOpponentOne = document.createElement("section")
+      creatureToughnessSectionOpponentOne.setAttribute('class', 'creature_at_section')
+      creatureInformationSectionOpponentOne.appendChild(creatureToughnessSectionOpponentOne)
 
-    var creatureToughnessOpponentOne = document.createElement('input')
-    creatureToughnessOpponentOne.setAttribute('class', 'creature_info')
-    creatureToughnessOpponentOne.setAttribute('type', 'number')
-    creatureInformationSectionOpponentOne.appendChild(creatureToughnessOpponentOne)
+      var creatureToughnessHeadingOpponentOne = document.createElement("h6")
+      var creatureToughnessHeadingTextOpponentOne = document.createTextNode("Toughness: ")
+      creatureToughnessHeadingOpponentOne.setAttribute('class', 'creature_info_heading')
+      creatureToughnessHeadingOpponentOne.appendChild(creatureToughnessHeadingTextOpponentOne)
+      creatureInformationSectionOpponentOne.appendChild(creatureToughnessHeadingOpponentOne)
 
-    img.addEventListener('dblclick', function handleClick(event){
+      var creatureToughnessOpponentOne = document.createElement('input')
+      creatureToughnessOpponentOne.setAttribute('class', 'creature_info')
+      creatureToughnessOpponentOne.setAttribute('type', 'number')
+      creatureInformationSectionOpponentOne.appendChild(creatureToughnessOpponentOne)
+    }
+
+      img.addEventListener('dblclick', function   handleClick(event){
       creatureSectionOpponentOne.remove();
-    })
+      })
 
-    img.addEventListener('click', function handleClick(event){
+      img.addEventListener('click', function handleClick(event){
       event.target.classList.toggle('rotate');
       event.preventDefault()
+      })
     })
-  })
 }
 
 function getFetchOpponentTwo(){
@@ -654,36 +672,41 @@ function getFetchOpponentTwo(){
     creatureInformationSectionOpponentTwo.setAttribute('class', 'creature_information_section')
     creatureSectionOpponentTwo.appendChild(creatureInformationSectionOpponentTwo)
 
-    var creatureAttackSectionOpponentTwo = document.createElement("section")
-    creatureAttackSectionOpponentTwo.setAttribute('class', 'creature_at_section')
-    creatureInformationSectionOpponentTwo.appendChild(creatureAttackSectionOpponentTwo)
+    var creatureType = data.cards[0].originalType
+    var creatureOfficial = "Creature"
+    console.log(creatureType)
+    if(creatureType.includes(creatureOfficial)){
 
-    var creatureAttackHeadingOpponentTwo = document.createElement("h6")
-    var creatureAttackHeadingTextOpponentTwo = document.createTextNode("Attack: ")
-    creatureAttackHeadingOpponentTwo.setAttribute('class', 'creature_info_heading')
-    creatureAttackHeadingOpponentTwo.appendChild(creatureAttackHeadingTextOpponentTwo)
-    creatureInformationSectionOpponentTwo.appendChild(creatureAttackHeadingOpponentTwo)
+      var creatureAttackSectionOpponentTwo = document.createElement("section")
+      creatureAttackSectionOpponentTwo.setAttribute('class', 'creature_at_section')
+      creatureInformationSectionOpponentTwo.appendChild(creatureAttackSectionOpponentTwo)
 
-    var creatureAttack = document.createElement('input')
-    creatureAttack.setAttribute('class', 'creature_info')
-    creatureAttack.setAttribute('type', 'number')
-    creatureInformationSectionOpponentTwo.appendChild(creatureAttack)
+      var creatureAttackHeadingOpponentTwo = document.createElement("h6")
+      var creatureAttackHeadingTextOpponentTwo = document.createTextNode("Attack: ")
+      creatureAttackHeadingOpponentTwo.setAttribute('class', 'creature_info_heading')
+      creatureAttackHeadingOpponentTwo.appendChild(creatureAttackHeadingTextOpponentTwo)
+      creatureInformationSectionOpponentTwo.appendChild(creatureAttackHeadingOpponentTwo)
 
-    var creatureToughnessSectionOpponentTwo = document.createElement("section")
-    creatureToughnessSectionOpponentTwo.setAttribute('class', 'creature_at_section')
-    creatureInformationSectionOpponentTwo.appendChild(creatureToughnessSectionOpponentTwo)
+      var creatureAttack = document.createElement('input')
+      creatureAttack.setAttribute('class', 'creature_info')
+      creatureAttack.setAttribute('type', 'number')
+      creatureInformationSectionOpponentTwo.appendChild(creatureAttack)
 
-    var creatureToughnessHeadingOpponentTwo = document.createElement("h6")
-    var creatureToughnessHeadingTextOpponentTwo = document.createTextNode("Toughness: ")
-    creatureToughnessHeadingOpponentTwo.setAttribute('class', 'creature_info_heading')
-    creatureToughnessHeadingOpponentTwo.appendChild(creatureToughnessHeadingTextOpponentTwo)
-    creatureInformationSectionOpponentTwo.appendChild(creatureToughnessHeadingOpponentTwo)
+      var creatureToughnessSectionOpponentTwo = document.createElement("section")
+      creatureToughnessSectionOpponentTwo.setAttribute('class', 'creature_at_section')
+      creatureInformationSectionOpponentTwo.appendChild(creatureToughnessSectionOpponentTwo)
 
-    var creatureToughnessOpponentTwo = document.createElement('input')
-    creatureToughnessOpponentTwo.setAttribute('class', 'creature_info')
-    creatureToughnessOpponentTwo.setAttribute('type', 'number')
-    creatureInformationSectionOpponentTwo.appendChild(creatureToughnessOpponentTwo)
+      var creatureToughnessHeadingOpponentTwo = document.createElement("h6")
+      var creatureToughnessHeadingTextOpponentTwo = document.createTextNode("Toughness: ")
+      creatureToughnessHeadingOpponentTwo.setAttribute('class', 'creature_info_heading')
+      creatureToughnessHeadingOpponentTwo.appendChild(creatureToughnessHeadingTextOpponentTwo)
+      creatureInformationSectionOpponentTwo.appendChild(creatureToughnessHeadingOpponentTwo)
 
+      var creatureToughnessOpponentTwo = document.createElement('input')
+      creatureToughnessOpponentTwo.setAttribute('class', 'creature_info')
+      creatureToughnessOpponentTwo.setAttribute('type', 'number')
+      creatureInformationSectionOpponentTwo.appendChild(creatureToughnessOpponentTwo)
+    }
     img.addEventListener('dblclick', function handleClick(event){
       creatureSectionOpponentTwo.remove();
     })
@@ -718,36 +741,41 @@ function getFetchOpponentThree(){
       creatureInformationSectionOpponentThree.setAttribute('class', 'creature_information_section')
       creatureSectionOpponentThree.appendChild(creatureInformationSectionOpponentThree)
 
-      var creatureAttackSectionOpponentThree = document.createElement("section")
-      creatureAttackSectionOpponentThree.setAttribute('class', 'creature_at_section')
-      creatureInformationSectionOpponentThree.appendChild(creatureAttackSectionOpponentThree)
+      var creatureType = data.cards[0].originalType
+      var creatureOfficial = "Creature"
+      console.log(creatureType)
+      if(creatureType.includes(creatureOfficial)){
 
-      var creatureAttackHeadingOpponentThree = document.createElement("h6")
-      var creatureAttackHeadingTextOpponentThree = document.createTextNode("Attack: ")
-      creatureAttackHeadingOpponentThree.setAttribute('class', 'creature_info_heading')
-      creatureAttackHeadingOpponentThree.appendChild(creatureAttackHeadingTextOpponentThree)
-      creatureInformationSectionOpponentThree.appendChild(creatureAttackHeadingOpponentThree)
+        var creatureAttackSectionOpponentThree = document.createElement("section")
+        creatureAttackSectionOpponentThree.setAttribute('class', 'creature_at_section')
+        creatureInformationSectionOpponentThree.appendChild(creatureAttackSectionOpponentThree)
 
-      var creatureAttack = document.createElement('input')
-      creatureAttack.setAttribute('class', 'creature_info')
-      creatureAttack.setAttribute('type', 'number')
-      creatureInformationSectionOpponentThree.appendChild(creatureAttack)
+        var creatureAttackHeadingOpponentThree = document.createElement("h6")
+        var creatureAttackHeadingTextOpponentThree = document.createTextNode("Attack: ")
+        creatureAttackHeadingOpponentThree.setAttribute('class', 'creature_info_heading')
+        creatureAttackHeadingOpponentThree.appendChild(creatureAttackHeadingTextOpponentThree)
+        creatureInformationSectionOpponentThree.appendChild(creatureAttackHeadingOpponentThree)
 
-      var creatureToughnessSectionOpponentThree = document.createElement("section")
-      creatureToughnessSectionOpponentThree.setAttribute('class', 'creature_at_section')
-      creatureInformationSectionOpponentThree.appendChild(creatureToughnessSectionOpponentThree)
+        var creatureAttack = document.createElement('input')
+        creatureAttack.setAttribute('class', 'creature_info')
+        creatureAttack.setAttribute('type', 'number')
+        creatureInformationSectionOpponentThree.appendChild(creatureAttack)
 
-      var creatureToughnessHeadingOpponentThree = document.createElement("h6")
-      var creatureToughnessHeadingTextOpponentThree = document.createTextNode("Toughness: ")
-      creatureToughnessHeadingOpponentThree.setAttribute('class', 'creature_info_heading')
-      creatureToughnessHeadingOpponentThree.appendChild(creatureToughnessHeadingTextOpponentThree)
-      creatureInformationSectionOpponentThree.appendChild(creatureToughnessHeadingOpponentThree)
+        var creatureToughnessSectionOpponentThree = document.createElement("section")
+        creatureToughnessSectionOpponentThree.setAttribute('class', 'creature_at_section')
+        creatureInformationSectionOpponentThree.appendChild(creatureToughnessSectionOpponentThree)
 
-      var creatureToughnessOpponentThree = document.createElement('input')
-      creatureToughnessOpponentThree.setAttribute('class', 'creature_info')
-      creatureToughnessOpponentThree.setAttribute('type', 'number')
-      creatureInformationSectionOpponentThree.appendChild(creatureToughnessOpponentThree)
+        var creatureToughnessHeadingOpponentThree = document.createElement("h6")
+        var creatureToughnessHeadingTextOpponentThree = document.createTextNode("Toughness: ")
+        creatureToughnessHeadingOpponentThree.setAttribute('class', 'creature_info_heading')
+        creatureToughnessHeadingOpponentThree.appendChild(creatureToughnessHeadingTextOpponentThree)
+        creatureInformationSectionOpponentThree.appendChild(creatureToughnessHeadingOpponentThree)
 
+        var creatureToughnessOpponentThree = document.createElement('input')
+        creatureToughnessOpponentThree.setAttribute('class', 'creature_info')
+        creatureToughnessOpponentThree.setAttribute('type', 'number')
+        creatureInformationSectionOpponentThree.appendChild(creatureToughnessOpponentThree)
+    }
       img.addEventListener('dblclick', function handleClick(event){
         creatureSectionOpponentThree.remove();
       })

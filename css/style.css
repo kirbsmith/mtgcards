@@ -301,6 +301,7 @@ h4{
   padding: 8px;
   color: white;
   background-color: rgba(10,10,10,0.5);
+  margin-top: 32px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
