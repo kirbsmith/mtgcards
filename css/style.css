@@ -105,7 +105,7 @@ button{
 }
 
 .search_buttons{
-  padding: 0 12px;
+  padding: 6px 12px 0px 12px;
   border-radius: 10px;
   margin-left: 3px;
   background: rgba(220,220,220,0.5);
