@@ -120,6 +120,8 @@ function decrementOpponent3(){
 
 var creatureData = 0;
 
+
+
 function landFetch(){
   const choice = document.querySelector('#land_input').value
   const url = `https://api.magicthegathering.io/v1/cards?name=${choice}`

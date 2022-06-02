@@ -145,6 +145,7 @@ button{
   border-radius: 10px;
   margin-left: 3px;
   background: rgba(220,220,220,0.5);
+  border: 2px solid black;
 }
 button:hover{
   background: black;
@@ -287,7 +288,9 @@ h4{
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: black;
+  background-color: rgba(10,10,10,0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 #contact_information{
@@ -297,7 +300,9 @@ h4{
   flex-direction: row;
   padding: 8px;
   color: white;
-  background-color: black;
+  background-color: rgba(10,10,10,0.5);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 h5{
@@ -358,7 +363,33 @@ h5:hover{
 .land_search_button{
   font-size: 18px;
   border-radius: 8px;
+  border: 2px solid black;
   padding: 10px 6px 6px 6px;
   margin-top: 5px;
   background: rgba(220,220,220,0.5)
+}
+
+.land_search_forest:hover{
+  background: rgba(0,115,62,0.8);
+  color: rgba(196,211,202,1);
+}
+
+.land_search_island:hover{
+  background: rgba(14,104,171,0.8);
+  color: rgba(179,206,234,1);
+}
+
+.land_search_mountain:hover{
+  background: rgba(211,32,42,0.8);
+  color: rgba(235,159,130,1);
+}
+
+.land_search_plains:hover{
+  background: rgba(249,250,185,0.8);
+  color: rgba(62,63,62,1);
+}
+
+.land_search_swamp:hover{
+  background: rgba(21,11,0,0.8);
+  color: rgba(166,159,157,1);
 }
