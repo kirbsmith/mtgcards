@@ -51,6 +51,23 @@ html{
   text-shadow: rgba(255,255,255,1) 2px 0 20px;
 }
 
+.tutorial{
+  position: absolute;
+  font-size: 20px;
+  top: 30px;
+  left: 30px;
+}
+
+.tutorial_anchor{
+  color: white;
+  text-decoration: underline 0.15em rgba(255,255,255,0);
+  transition: text-decoration-color 0.4s;
+}
+
+.tutorial_anchor:hover{
+  text-decoration-color: white;
+}
+
 .description_section{
   display: flex;
   justify-content: center;
@@ -89,6 +106,8 @@ button{
 
 .search_buttons{
   padding: 0 12px;
+  border-radius: 10px;
+  margin-left: 3px;
 }
 button:hover{
   background: black;
@@ -288,4 +307,21 @@ h5:hover{
 #card_image_section_opponent3{
   display: flex;
   flex-direction: row;
+}
+
+.basic_lands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.land_search_button{
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 10px 6px 6px 6px;
+  margin-top: 5px;
+  background: rgba(220,220,220,0.6)
 }

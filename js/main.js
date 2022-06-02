@@ -7,52 +7,6 @@ document.querySelector('#creature_button_opponent2').addEventListener('click', g
 document.querySelector('#land_button_opponent2').addEventListener('click', landFetchOpponentTwo)
 document.querySelector('#creature_button_opponent3').addEventListener('click', getFetchOpponentThree)
 document.querySelector('#land_button_opponent3').addEventListener('click', landFetchOpponentThree)
-//
-
-
-
-// const box = document.getElementById('card_section_with_counter');
-// box.addEventListener('dblclick', function handleClick(event){
-//   box.remove();
-// })
-
-// const boxOpponentOne = document.getElementById('card_image_section_opponent1');
-// boxOpponentOne.addEventListener('dblclick', function handleClick(event){
-//   event.target.remove();
-// })
-//
-// const boxOpponentTwo = document.getElementById('card_image_section_opponent2');
-// boxOpponentTwo.addEventListener('dblclick', function handleClick(event){
-//   event.target.remove();
-// })
-//
-// const boxOpponentThree = document.getElementById('card_image_section_opponent3');
-// boxOpponentThree.addEventListener('dblclick', function handleClick(event){
-//   event.target.remove();
-// })
-
-
-
-// box.addEventListener('click', function handleClick(event){
-//   event.target.classList.toggle('rotate');
-//   event.preventDefault()
-// })
-//
-// boxOpponentOne.addEventListener('click', function handleClick(event){
-//   event.target.classList.toggle('rotate');
-//   event.preventDefault()
-// })
-
-// boxOpponentTwo.addEventListener('click', function handleClick(event){
-//   event.target.classList.toggle('rotate');
-//   event.preventDefault()
-// })
-//
-// boxOpponentThree.addEventListener('click', function handleClick(event){
-//   event.target.classList.toggle('rotate');
-//   event.preventDefault()
-// })
-
 
 const boxLands = document.getElementById('land_image_section');
 boxLands.addEventListener('dblclick', function handleClick(event){
@@ -163,12 +117,89 @@ function landFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data.cards)
-        console.log(data.cards[1].name)
+        console.log(data.cards[0].name)
 
         var img = document.createElement("img")
-        img.src = data.cards[1].imageUrl
+        img.src = data.cards[0].imageUrl
         var src = document.getElementById('land_image_section')
         src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_forest').addEventListener('click', basicLandFetchForest)
+
+function basicLandFetchForest(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=4a17c998-1a44-5537-b675-b19522d43bee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.cards)
+
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_plains').addEventListener('click', basicLandFetchPlains)
+
+function basicLandFetchPlains(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c4823642-08dd-5c10-ae26-ef8d52cf3a43`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_island').addEventListener('click', basicLandFetchIsland)
+
+function basicLandFetchIsland(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=2e21d91d-3970-503f-b36a-e2b0e37fb3ee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_mountain').addEventListener('click', basicLandFetchMountain)
+
+function basicLandFetchMountain(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c1f98960-ef31-5ec9-af8d-d6d56169047b`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data =>{
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_swamp').addEventListener('click', basicLandFetchSwamp)
+
+function basicLandFetchSwamp(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=ec72e59f-bc37-50fd-a1b5-3afac5a402b3`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section')
+      src.appendChild(img)
     })
 }
 
@@ -181,10 +212,87 @@ function landFetchOpponentOne(){
     .then(data => {
       console.log(data)
       console.log(data.cards)
-      console.log(data.cards[1].name)
+      console.log(data.cards[0].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[1].imageUrl
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent1')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_forest_opponent1').addEventListener('click', basicLandFetchForestOpponentOne)
+
+function basicLandFetchForestOpponentOne(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=4a17c998-1a44-5537-b675-b19522d43bee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.cards)
+
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent1')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_plains_opponent1').addEventListener('click', basicLandFetchPlainsOpponentOne)
+
+function basicLandFetchPlainsOpponentOne(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c4823642-08dd-5c10-ae26-ef8d52cf3a43`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent1')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_island_opponent1').addEventListener('click', basicLandFetchIslandOpponentOne)
+
+function basicLandFetchIslandOpponentOne(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=2e21d91d-3970-503f-b36a-e2b0e37fb3ee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent1')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_mountain_opponent1').addEventListener('click', basicLandFetchMountainOpponentOne)
+
+function basicLandFetchMountainOpponentOne(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c1f98960-ef31-5ec9-af8d-d6d56169047b`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data =>{
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent1')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_swamp_opponent1').addEventListener('click', basicLandFetchSwampOpponentOne)
+
+function basicLandFetchSwampOpponentOne(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=ec72e59f-bc37-50fd-a1b5-3afac5a402b3`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
       var src = document.getElementById('land_image_section_opponent1')
       src.appendChild(img)
     })
@@ -199,10 +307,87 @@ function landFetchOpponentTwo(){
     .then(data => {
       console.log(data)
       console.log(data.cards)
-      console.log(data.cards[1].name)
+      console.log(data.cards[0].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[1].imageUrl
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent2')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_forest_opponent2').addEventListener('click', basicLandFetchForestOpponentTwo)
+
+function basicLandFetchForestOpponentTwo(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=4a17c998-1a44-5537-b675-b19522d43bee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.cards)
+
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent2')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_plains_opponent2').addEventListener('click', basicLandFetchPlainsOpponentTwo)
+
+function basicLandFetchPlainsOpponentTwo(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c4823642-08dd-5c10-ae26-ef8d52cf3a43`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent2')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_island_opponent2').addEventListener('click', basicLandFetchIslandOpponentTwo)
+
+function basicLandFetchIslandOpponentTwo(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=2e21d91d-3970-503f-b36a-e2b0e37fb3ee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent2')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_mountain_opponent2').addEventListener('click', basicLandFetchMountainOpponentTwo)
+
+function basicLandFetchMountainOpponentTwo(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c1f98960-ef31-5ec9-af8d-d6d56169047b`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data =>{
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent2')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_swamp_opponent2').addEventListener('click', basicLandFetchSwampOpponentTwo)
+
+function basicLandFetchSwampOpponentTwo(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=ec72e59f-bc37-50fd-a1b5-3afac5a402b3`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
       var src = document.getElementById('land_image_section_opponent2')
       src.appendChild(img)
     })
@@ -216,10 +401,87 @@ function landFetchOpponentThree(){
     .then(res => res.json())
     .then(data => {
       console.log(data.cards)
-      console.log(data.cards[1].name)
+      console.log(data.cards[0].name)
 
       var img = document.createElement("img")
-      img.src = data.cards[1].imageUrl
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent3')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_forest_opponent3').addEventListener('click', basicLandFetchForestOpponentThree)
+
+function basicLandFetchForestOpponentThree(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=4a17c998-1a44-5537-b675-b19522d43bee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.cards)
+
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent3')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_plains_opponent3').addEventListener('click', basicLandFetchPlainsOpponentThree)
+
+function basicLandFetchPlainsOpponentThree(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c4823642-08dd-5c10-ae26-ef8d52cf3a43`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent3')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_island_opponent3').addEventListener('click', basicLandFetchIslandOpponentThree)
+
+function basicLandFetchIslandOpponentThree(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=2e21d91d-3970-503f-b36a-e2b0e37fb3ee`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent3')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_mountain_opponent3').addEventListener('click', basicLandFetchMountainOpponentThree)
+
+function basicLandFetchMountainOpponentThree(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=c1f98960-ef31-5ec9-af8d-d6d56169047b`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data =>{
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
+      var src = document.getElementById('land_image_section_opponent3')
+      src.appendChild(img)
+    })
+}
+
+document.querySelector('#land_search_swamp_opponent3').addEventListener('click', basicLandFetchSwampOpponentThree)
+
+function basicLandFetchSwampOpponentThree(){
+  const url = `https://api.magicthegathering.io/v1/cards?id=ec72e59f-bc37-50fd-a1b5-3afac5a402b3`
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var img = document.createElement("img")
+      img.src = data.cards[0].imageUrl
       var src = document.getElementById('land_image_section_opponent3')
       src.appendChild(img)
     })
