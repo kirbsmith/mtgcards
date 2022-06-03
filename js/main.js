@@ -20,6 +20,59 @@ tutorialXOut.addEventListener('click', function handleMouseOut(){
   tutorialDirections.style.display = 'none';
 })
 
+
+const colorList = document.getElementById('color_identity_section')
+const openColorPopup = document.getElementById('open_color_popup')
+const colorDirections = document.getElementById('select_color_identity')
+
+openColorPopup.addEventListener('click', function handleClick(){
+  document.getElementById('color_identity_section').style.display = 'block';
+  document.getElementById('all_sections').style.display = "none";
+})
+
+colorDirections.addEventListener('click', function handleClick(){
+  document.getElementById('all_sections').style.display = "block"
+})
+
+const greenChoice = document.getElementById('green')
+greenChoice.addEventListener('click', function handleClick(){
+  document.getElementById('main_body').style.backgroundImage = "url('js/images/green.jpg')";
+  document.getElementById('all_sections').style.display = "block"
+  console.log('worked')
+});
+
+const whiteChoice = document.getElementById('white')
+whiteChoice.addEventListener('click', function handleClick(){
+  document.getElementById('main_body').style.backgroundImage = "url('js/images/white_background.jpg')"
+  document.getElementById('all_sections').style.display = "block"
+});
+
+const blueChoice = document.getElementById('blue')
+blueChoice.addEventListener('click', function handleClick(){
+  document.getElementById('main_body').style.backgroundImage = "url('js/images/blue_background.jpg')"
+  document.getElementById('all_sections').style.display = "block"
+});
+
+const redChoice = document.getElementById('red')
+redChoice.addEventListener('click', function handleClick(){
+  document.getElementById('main_body').style.backgroundImage = "url('js/images/red_background.jpg')"
+  document.getElementById('all_sections').style.display = "block"
+});
+
+const blackChoice = document.getElementById('black')
+blackChoice.addEventListener('click', function handleClick(){
+  document.getElementById('main_body').style.backgroundImage = "url('js/images/black_background.jpg')"
+  document.getElementById('all_sections').style.display = "block"
+});
+
+colorList.addEventListener('click', function handleClick(){
+  colorList.style.display = 'none';
+});
+
+
+
+
+
 const boxLands = document.getElementById('land_image_section');
 boxLands.addEventListener('dblclick', function handleClick(event){
   event.target.remove();

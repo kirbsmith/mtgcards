@@ -11,10 +11,11 @@
 		  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
 		  <link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body id="main_body">
   	<section class="top_header_section">
 		  <h1 class="top_header_text">Magic: The Gathering Card Game</h1>
 			<h3 id="tutorial_heading">Need a tutorial?</h3>
+			<h3 id="open_color_popup">Change background</h3>
 			<section id="tutorial_section">
 					<h4 id="tutorial_x_out">X</h4>
 					<ul class="tutorial_section_list">
@@ -26,8 +27,18 @@
 						<li>The land cards work in a similar way, except they are only used as payment to cast creatures, enchantments, equipments, and other non-land cards</li>
 						<li>For basic land cards, you can click the "Add __________" instead of typing in the card's name</li>
 					</ul>
-    </section>
-	<section class="all_player_sections">
+				</section>
+				<section id="color_popup">
+					<section id="color_identity_section">
+							<h3 id="select_color_identity">Choose based on your deck's primary color</h3>
+							<h4 class="color_list" id="green">Green</h4>
+							<h4 class="color_list" id="white">White</h4>
+							<h4 class="color_list" id="blue">Blue</h4>
+							<h4 class="color_list" id="red">Red</h4>
+							<h4 class="color_list" id="black">Black</h4>
+					</section>
+    	</section>
+	<section class="all_player_sections" id="all_sections">
 		<section class="life_section">
 			<button class="lose_life_button" onclick="decrement()">=</button>
 			<h4 id="counting"></h4>

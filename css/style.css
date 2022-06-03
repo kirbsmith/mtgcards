@@ -10,11 +10,9 @@
   	font-family: "Fira Sans", "Montserrat", sans-serif;
   	font-size: 16px;
   	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
     margin: 0;
     border: 0;
     padding: 0;
-    background: url(images/mtg_background.jpg) no-repeat center center fixed;
     cursor: url("cursor.png"), default;
 }
 
@@ -29,8 +27,11 @@ img:hover{
   height: auto;
 }
 
-html{
-  background: url('mtg_background.jpg') no-repeat center center fixed;
+#main_body{
+  background-image: url('mtg_background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
 }
 
@@ -55,7 +56,7 @@ html{
   position: absolute;
   font-size: 30px;
   color: white;
-  top: 45px;
+  top: 60px;
   left: 30px;
   padding: 8px 6px 0px 8px;
   font-family: "MAGIC", sans-serif;
@@ -73,7 +74,7 @@ html{
 #tutorial_section{
   position: absolute;
   left: 30px;
-  top: 90px;
+  top: 105px;
   display: none;
 }
 
@@ -137,7 +138,6 @@ button{
   font-family: "MAGIC", sans-serif;
   font-size: 40px;
   transition: 0.2s;
-  radius: 5px;
 }
 
 .search_buttons{
@@ -154,12 +154,18 @@ button:hover{
 
 .lose_life_button{
   color: darkred;
-  text-shadow: rgba(250,100,120,1) 0 0 10px;
+  text-shadow: rgba(250,100,120,1) 0 0 8px;
+  background: rgba(10,10,10,0.4);
+  padding: 0 14px;
+  border-radius: 8px;
 }
 
 .gain_life_button{
   color: white;
-  text-shadow: rgba(120,240,200,0.8) 0 0 10px;
+  text-shadow: rgba(120,240,200,0.8) 0 0 8px;
+  background: rgba(10,10,10,0.4);
+  padding: 0 14px;
+  border-radius: 8px;
 }
 
 .directions{
@@ -235,11 +241,6 @@ h2{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  /* background: rgba(5,5,5,0.5); */
-}
-
-.life_buttons{
-  padding: 8px;
 }
 
 h4{
@@ -395,4 +396,64 @@ h5:hover{
 .land_search_swamp:hover{
   background: rgba(21,11,0,0.8);
   color: rgba(166,159,157,1);
+}
+
+#open_color_popup{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-family: "MAGIC", sans-serif;
+  font-size: 20px;
+  color: rgba(240,240,240,0.9);
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 4px;
+  transition: 0.4s;
+}
+
+#open_color_popup:hover{
+  background: black;
+}
+
+#select_color_identity{
+  text-align: center;
+  color: rgba(230,230,230,0.9);
+  padding-top: 6px 6px;
+  font-family: "MAGIC", sans-serif;
+  font-size: 24px;
+
+}
+
+.color_list{
+  color: rgba(220,220,220,0.9);
+  background: rgba(15,15,15,0.99);
+  margin: 12px 0px;
+  padding: 12px 9px 0 9px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.color_list:hover{
+  background: white;
+  color: black;
+}
+
+#color_identity_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border-radius: 6px;
+  gap: 20px;
+  display: none;
+}
+
+#color_popup{
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  z-index: 1;
 }
