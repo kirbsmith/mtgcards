@@ -36,33 +36,38 @@ colorDirections.addEventListener('click', function handleClick(){
 
 const greenChoice = document.getElementById('green')
 greenChoice.addEventListener('click', function handleClick(){
-  document.getElementById('main_body').style.backgroundImage = "url('js/images/green.jpg')";
+  document.getElementById('main_body').style.backgroundImage = "url('./images/green_background.jpg')";
   document.getElementById('all_sections').style.display = "block"
-  console.log('worked')
+  document.getElementById('opponent_one_name_title').style.color = "rgba(240,240,240,0.9)"
+  document.getElementById('opponent_two_name_title').style.color = "rgba(240,240,240,0.9)"
+  document.getElementById('opponent_three_name_title').style.color = "rgba(240,240,240,0.9)"
 });
 
 const whiteChoice = document.getElementById('white')
 whiteChoice.addEventListener('click', function handleClick(){
-  document.getElementById('main_body').style.backgroundImage = "url('js/images/white_background.jpg')"
+  document.getElementById('main_body').style.backgroundImage = "url('./images/white_background.jpg')"
   document.getElementById('all_sections').style.display = "block"
 });
 
 const blueChoice = document.getElementById('blue')
 blueChoice.addEventListener('click', function handleClick(){
-  document.getElementById('main_body').style.backgroundImage = "url('js/images/blue_background.jpg')"
+  document.getElementById('main_body').style.backgroundImage = "url('./images/blue_background.jpg')"
   document.getElementById('all_sections').style.display = "block"
 });
 
 const redChoice = document.getElementById('red')
 redChoice.addEventListener('click', function handleClick(){
-  document.getElementById('main_body').style.backgroundImage = "url('js/images/red_background.jpg')"
+  document.getElementById('main_body').style.backgroundImage = "url('./images/red_background.jpg')"
   document.getElementById('all_sections').style.display = "block"
 });
 
 const blackChoice = document.getElementById('black')
 blackChoice.addEventListener('click', function handleClick(){
-  document.getElementById('main_body').style.backgroundImage = "url('js/images/black_background.jpg')"
+  document.getElementById('main_body').style.backgroundImage = "url('./images/black_background.jpg')"
   document.getElementById('all_sections').style.display = "block"
+  document.getElementById('opponent_one_name_title').style.color = "rgba(240,240,240,0.9)"
+  document.getElementById('opponent_two_name_title').style.color = "rgba(240,240,240,0.9)"
+  document.getElementById('opponent_three_name_title').style.color = "rgba(240,240,240,0.9)"
 });
 
 colorList.addEventListener('click', function handleClick(){
