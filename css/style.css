@@ -46,8 +46,8 @@ img:hover{
   align-items: center;
   justify-content: center;
   align-content: center;
-  font-size: 4vw;
-  padding: 30px 0;
+  font-size: 48px;
+  padding: 30px 0 55px 0;
   color: black;
   text-shadow: rgba(255,255,255,1) 2px 0 20px;
 }
@@ -456,4 +456,31 @@ h5:hover{
   left: 0px;
   top: 100px;
   z-index: 1;
+}
+
+@media screen and (max-width: 700px){
+  .top_header_text{
+    padding: 48px 0;
+    font-size: 6.5vw;
+  }
+  #open_color_popup{
+    font-size: 18px;
+  }
+  #tutorial_heading{
+    font-size: 18px;
+    top: 90px;
+    left: 20px;
+  }
+  /* #tutorial_heading{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    top: 60px;
+    left: 30px;
+    padding: 8px 6px 0px 8px;
+    font-family: "MAGIC", sans-serif;
+    background: rgba(10,10,10,0.3);
+    border-radius: 2px;
+    transition: 0.4s; */
+  }
 }
