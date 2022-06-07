@@ -458,29 +458,36 @@ h5:hover{
   z-index: 1;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
   .top_header_text{
     padding: 48px 0;
-    font-size: 6.5vw;
+    font-size: 28px;
   }
   #open_color_popup{
     font-size: 18px;
+    left: 180px;
+    top: 90px;
   }
   #tutorial_heading{
     font-size: 18px;
     top: 90px;
     left: 20px;
   }
-  /* #tutorial_heading{
-    position: absolute;
-    font-size: 30px;
-    color: white;
-    top: 60px;
-    left: 30px;
-    padding: 8px 6px 0px 8px;
-    font-family: "MAGIC", sans-serif;
-    background: rgba(10,10,10,0.3);
-    border-radius: 2px;
-    transition: 0.4s; */
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+  .top_header_text{
+    padding: 48px 0;
+    font-size: 38px;
+  }
+  #open_color_popup{
+    font-size: 18px;
+    left: 180px;
+    top: 90px;
+  }
+  #tutorial_heading{
+    font-size: 18px;
+    top: 90px;
+    left: 20px;
   }
 }
