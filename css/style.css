@@ -85,7 +85,7 @@ img:hover{
   gap: 16px;
   width: 375px;
   color: white;
-  background: rgba(10,10,10,0.6);
+  background: rgba(10,10,10,0.9);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0 0 8px 12px;
@@ -94,7 +94,7 @@ img:hover{
 #tutorial_x_out{
   text-align: right;
   padding: 12px 12px 0 0;
-  background: rgba(10,10,10,0.6);
+  background: rgba(10,10,10,0.9);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-size: 20px;
