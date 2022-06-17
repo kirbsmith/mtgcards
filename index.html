@@ -38,6 +38,12 @@
 							<h4 class="color_list" id="black">Black</h4>
 					</section>
     	</section>
+			<section id="opponent_names">
+				<input id="opponent_one_name" type="text" name="" value="" placeholder="Opponent 1 Name">
+				<input id="opponent_two_name" type="text" name="" value="" placeholder="Opponent 2 Name">
+				<input id="opponent_three_name" type="text" name="" value="" placeholder="Opponent 3 Name">
+				<button class="search_buttons" id="opponent_name_submit_button" type="button" name="button">Submit Player Names</button>
+			</section>
 	<section class="all_player_sections" id="all_sections">
 		<section class="life_section">
 			<button class="lose_life_button" onclick="decrement()">=</button>
@@ -107,7 +113,7 @@
 			</section>
 		</section>
 		<!--  opponent two section begins below -->
-		<section class="opponent_section">
+		<section class="opponent_section" id="opponent_two_section">
 			<h2 id="opponent_two_name_title" class="card_section_title">Opponent 2</h2>
 			<section class="life_section">
 				<button class="lose_life_button" onclick="decrementOpponent2()">=</button>
@@ -138,10 +144,11 @@
 					<h2 class="land_section">Lands</h2>
 					<section id="land_image_section_opponent2">
 					</section>
+				</section>
 			</section>
 		</section>
 		<!--  opponent three section begins below -->
-		<section class="opponent_section">
+		<section class="opponent_section" id="opponent_three_section">
 			<h2 id="opponent_three_name_title" class="card_section_title">Opponent 3</h2>
 			<section class="life_section">
 				<button class="lose_life_button" onclick="decrementOpponent3()">=</button>

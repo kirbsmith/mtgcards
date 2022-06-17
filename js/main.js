@@ -7,6 +7,23 @@ document.querySelector('#creature_button_opponent2').addEventListener('click', g
 document.querySelector('#land_button_opponent2').addEventListener('click', landFetchOpponentTwo)
 document.querySelector('#creature_button_opponent3').addEventListener('click', getFetchOpponentThree)
 document.querySelector('#land_button_opponent3').addEventListener('click', landFetchOpponentThree)
+document.querySelector('#opponent_name_submit_button').addEventListener('click', playerNameChange)
+
+function playerNameChange(){
+  var opponentOneName = document.getElementById('opponent_one_name').value
+  console.log(opponentOneName)
+  document.getElementById('opponent_one_name_title').innerText = opponentOneName
+  var opponentTwoName = document.getElementById('opponent_two_name').value
+  document.getElementById('opponent_two_name_title').innerText = opponentTwoName
+  var opponentThreeName = document.getElementById('opponent_three_name').value
+  document.getElementById('opponent_three_name_title').innerText = opponentThreeName
+  if (opponentTwoName === ""){
+    document.getElementById('opponent_two_section').style.display = "none";
+  } else if (opponentThreeName === ""){
+    document.getElementById('opponent_three_section').style.display = "none";
+  }
+  document.getElementById('opponent_names').style.display = "none";
+}
 
 const tutorialHover = document.getElementById('tutorial_heading')
 const tutorialDirections = document.getElementById('tutorial_section')
