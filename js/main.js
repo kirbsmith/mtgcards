@@ -25,6 +25,12 @@ function playerNameChange(){
   document.getElementById('opponent_names').style.display = "none";
 }
 
+const opponentNameSection = document.getElementById('opponent_names')
+const opponentNameXOut = document.getElementById('opponent_name_x_out')
+opponentNameXOut.addEventListener('click', function handleClick(){
+  opponentNameSection.style.display = 'none';
+})
+
 const tutorialHover = document.getElementById('tutorial_heading')
 const tutorialDirections = document.getElementById('tutorial_section')
 const tutorialXOut = document.getElementById('tutorial_x_out')
